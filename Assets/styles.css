@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root{
+    /*================== Colors variables ===================*/
+    --secondary-color: #1179BF;
+    --primary-color: #f4f4f4;
+    --dark-color: #333;
+    --white-color: #ffffff;
+    --border-color: #20b2aa;
+    --gray-color: #555;
+    --numeric-color: #548BC5;
+    --btn-primary: #038E7D;
+    
+
+
+    /*=============== Pixel variables ====================*/
+    --sm-radius: 3px;
+    --md-radius:7px;
+    --lg-radius: 16px;
+    --xl-radius: 50%;
+    --sm-size: 16px;
+    --md-size: 28px;
+    --lg-size: 38px;
+    --xl-size: 50px;
+    --sm-width: 150px;
+    --full-width: 100%;
+    --no-radius: none;
+
+
+    /*============ Fractional Units =====================*/
+    --fraction-1: 1fr;
+    --fraction-2: 1.5fr;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+
+nav{
+    width: var(--full-width);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:var(--white-color);;
+}
+
+nav header img{
+    width: var(--sm-width);
+    position: relative;
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > ul > li{
+    list-style-type: none;
+    margin: 0 12px;
+}
+
+nav > ul > li > a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--gray-color);
+    font-size: var(--sm-size);
+    font-weight: normal;
+}
+
+nav ul .acct-link{
+border: 1px solid var(--border-color);
+border-radius: 5px;
+padding: 10px;
+}
+
+nav .menu{
+    display: none;
+    
+}
+
+nav .menu i.fas{
+    font-size: 20px;
+    color: var(--btn-primary);;
+}
+
+nav > ul > .acct-link a{
+    text-decoration: none;
+    font-size: var(--sm-size);
+    font-weight: normal;
+    color: var(--gray-color);
+    position: relative;
+
+}
+
+/*===================== Main ====================*/
+main{
+    width: var(--full-width);
+}
+
+/*================ Container ==================*/
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--fraction-2) var(--fraction-1);
+    grid-gap: 0px;
+    margin: var(--md-size) auto;
+    width: 70%;
+    overflow: auto;
+    
+}
+
+/*===================== col-1 =====================*/
+.container .col-1{
+padding: var(--md-size);
+background: var(--white-color);
+border: none;
+border-radius: var(--sm-radius);
+}
+
+.col-1 .check-out-header{
+    font-size: var(--md-size);;
+    font-weight: bold;
+    color: var(--dark-color);
+    padding: var(--md-radius) 0px;
+
+}
+
+/*===================== Form .info ==================*/
+form .info{
+    display: inline-flex;
+    padding: var(--md-size) 0px;
+    margin: var(--sm-size) 0px;
+}
+
+/*===================== Form .info span ==================*/
+form .info span{
+   border: 2px solid var(--numeric-color);
+   padding: 0px var(--md-radius);
+   border-radius: var(--xl-radius);
+   font-size: var(--sm-size);
+   color: var( --numeric-color);
+   text-align:center;
+   margin-right: var(--sm-size);
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*============ input-wrapper ======================*/
+form .input-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--full-width);
+}
+
+/*============== form-control =====================*/
+.form-control{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+/*================= Label ====================*/
+.form-control label{
+    font-size: var(--sm-size);
+    padding: var(--md-radius) 0px;
+
+}
+
+/*=============== form-input ======================*/
+.form-control .form-input{
+    width: var(--full-width);
+    position: relative;
+    padding: 14px;
+    border: none;
+    background: var(--primary-color);
+    border-radius: var(--md-radius);
+
+}
+
+/*===================== On focus input =============*/
+.form-control .form-input:focus{
+    outline: none;
+}
+
+/*=================== For placeholder ===============*/
+.form-control .form-input::placeholder{
+    font-size: 14px;
+    color: var(--gray-color);
+    letter-spacing: 1px;
+}
+
+
+/*=========== .form-control .credit-card-input  ===================*/
+.form-control .credit-card-input{
+    display: flex;
+    background: var(--primary-color);
+    width: var(--full-width);
+    position: relative;
+    border-radius: var(--md-radius);
+   
+}
+
+/*====================== credit-card-input date =================*/
+.form-control .credit-card-input .date{
+    display: inline-flex;
+    width: var(--full-width);
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: var(--sm-size);
+    color: var(--gray-color);
+    font-size: 14px;
+
+}
+
+/*====================== Button =======================*/
+button.btn{
+    background: var(--btn-primary);
+    border: var(--no-radius);
+    padding: var(--sm-size);
+    border-radius: var(--sm-radius);
+    text-align:center;
+    color: var(--white-color);
+    font-size: var(--sm-size);
+    font-weight: bold;
+    margin: var(--md-size) 0 auto;
+    width: var(--full-width);
+    position: relative;
+    cursor:pointer;
+}
+
+/*=================== Form support ======================*/
+.support{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;;
+    padding: var(--sm-size);
+
+}
+
+/*=================== Q-mark ====================*/
+.support .Q-mark{
+    border: 2px solid var(--numeric-color);
+    padding: 0px var(--md-radius);
+    border-radius: var(--xl-radius);
+    font-size: var(--sm-size);
+    color: var( --numeric-color);
+    text-align: center;
+    margin-right: var(--sm-size);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*======================= Stripe ======================*/
+form .stripe{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align:center;
+background-color: var(--gray-color);
+color: var(--white-color);
+font-size: 14px;
+width: fit-content;
+border: var(--no-radius);
+border-radius: var(--md-radius);
+padding: var(--md-radius);
+margin: var(--sm-radius) auto;position: relative;}
+
+form .stripe strong{
+    font-weight: bolder;
+    margin-left: var(--sm-radius);
+}
+
+/*===================== col-2 ==========================*/
+.container .col-2{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: var(--md-size);
+    background:var(--secondary-color);
+    border: none;
+    color: var(--white-color);
+    border-radius: var(--no-radius);
+    }
+
+/*=================== items-wrapper =====================*/
+.container .items-wrapper h1{
+    font-size: var(--md-size);
+    padding: var(--md-size) 0;
+}
+
+.container .flex-items{
+    display: inline-flex;
+    padding: var(--sm-size) 0px;
+}
+
+.container .flex-items .innner-txt, .innner-text{
+    font-size: var(--sm-size);
+}
+.container .flex-items .strong-txt{
+    font-size: var(--lg-size);
+    font-weight: bold;
+}
+
+.container .innner-tex{
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.items-wrapper .italic-txt{
+    font-style: italic;
+    margin: 0 0 var(--md-size)
+}
+
+/*================= text-list-wrapper =======================*/
+.text-list-wrapper{
+    padding: var(--sm-size) 0;
+}
+
+/*========================== text-items ===================*/
+.text-list-wrapper .text-items{
+    list-style: var(--no-radius);
+}
+/*========================== text-items li ===================*/
+.text-list-wrapper .text-items > li{
+    padding-bottom: var(--sm-size);
+}
+/*========================== text-items icons ===================*/
+.text-list-wrapper .text-items > li i.fas.fa{
+    color: var(--white-color);
+    font-size: 12px;
+}
+
+.text-list-wrapper .text-items > li span{
+    padding: 0px var(--sm-radius);
+    border: 1px solid var(--white-color);
+    border-radius: var(--xl-radius);
+    color: var(--white-color);
+    text-align: center;
+    margin-right: var(--sm-size);
+}
+
+.row{
+    margin: var(--md-size) 0px;
+}
+
+.row > li{
+    list-style-type: var(--no-radius);
+    line-height: 1.7;
+}
+
+#hr{
+    margin: var(--md-size) auto !important;
+    border: none;
+    border-color: var(--gray-color);
+}
+
+.simple-txt{
+    padding: var(--sm-size) 0;
+    margin-bottom: var(--sm-size);
+}
+
+.simple-txt p{
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/*==================== img-txt-wrapper ====================*/
+.img-txt-wrapper{
+    display: flex;width: var(--full-width);
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--sm-size);
+}
+
+/*===================== .img-wrapper =======================*/
+.img-wrapper{ 
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    overflow: hidden;
+    border-radius: var(--xl-radius);
+}
+
+.img-wrapper img{
+    width: var(--full-width);
+    position: relative;
+    overflow: hidden;
+    border: var(--no-radius);
+    border-radius: var(--xl-radius); 
+}
+
+.img-wrapper > p{
+    position: relative;
+}
+
+/*================ Footer =====================*/
+footer {
+    background: inherit;
+    padding: var(--md-size);
+
+}
+
+footer > p{
+    color: var(--dark-color);
+    font-size: 14px;
+    text-align:center;
+}
+
+
+/*======================== On smaller screen  ===================*/
+@media only screen and (max-width: 850px){
+
+    nav > ul{
+        display: none;
+    }
+
+    nav .menu{
+        display: block;
+    }
+}
+
+
+/*======================== On smaller screen  ===================*/
+@media only screen and (max-width: 650px){
+
+    nav > ul{
+        display: none;
+    }
+
+    nav .menu{
+        display: initial;
+    }
+
+    /*================ Container ==================*/
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
+        overflow: hidden;
+        
+    }
+
+    .container .col-1{
+        order: 1;
+        position: relative;
+    }
+    .container .col-2{
+        order: 2;
+    }
+
+    /*============ input-wrapper ======================*/
+   form .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: var(--full-width);
+  }
+ /*============== form-control =====================*/
+    .form-control{
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        width: var(--full-width);
+    }
+
+
+
+}
+
+/*======================== On smaller screen  ===================*/
+@media only screen and (max-width: 450px){
+
+    nav > ul{
+        display: none;
+    }
+
+    nav .menu{
+        display: initial;
+    }}
