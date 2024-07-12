@@ -1,1 +1,1 @@
-Check this out https://sixtusdeveloper.github.io/Project02/
+A static HTML & CSS project 
